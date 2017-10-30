@@ -1,0 +1,21 @@
+.redBorder{
+  border: 1px solid red;
+}
+
+.header{
+  height: 185px;
+}
+
+.middle{
+  height: 360px;
+}
+
+.countryIcon{
+  height: 24px;
+  width: 24px;
+}
+
+.fullSize{
+  height: 100%;
+  width: 100%;
+}
