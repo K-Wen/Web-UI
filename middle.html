@@ -10,10 +10,11 @@
   <body class="layui-fluid" style="border:1px solid green;">
     <div class="layui-container middle" style="border:1px solid green;">
       <div class="layui-row" style="border:1px solid green;">
-        <div class="layui-col-md3 redBorder">
-          <div style="text-align:center;">
-            <label>最新公告</label>
-          </div>
+        <div class="layui-col-md3 redBorder" style="text-align:center;">
+          <label>最新公告</label>
+          <marquee height="300px" width="90%" align="center" scrollamount="2" direction="up" onMouseOut="start()" onMouseOver="stop()">
+            <p id="notice"></p >
+          </marquee >
         </div>
         <div class="layui-col-md9 redBorder">
           <div class="layui-carousel" id="carousel">
@@ -26,6 +27,7 @@
         </div>
       </div>
     </div>
+  <script src="./third-part/jquery-3.2.1.min.js"></script>
   <script src="./third-part/layui/layui.js"></script>
   <script>
     layui.use('carousel', function(){
@@ -37,6 +39,9 @@
         ,arrow: 'always' //始终显示箭头
         //,anim: 'updown' //切换动画方式
       });
+    });
+    $(function(){
+      $("#notice").text("怕茶房不妥帖；颇踌躇了一会。其实我那年已二十岁，北京已来往过两三次，是没有甚么要紧的了。他踌躇了一会，终于决定还是自己送我去。我两三回劝他不必去；他只说，“不要紧，他们去不好他再三嘱咐茶房，甚是仔细。但他终于不放心，怕茶房不妥帖；颇踌躇了一会。其实我那年已二十岁，北京已来往过两三次，是没有甚么要紧的了。他踌躇了一会，终于决定还是自己送我去。我两三回劝他不必去；他只说，“不要紧，他们去不好");
     });
   </script>
   </body>
