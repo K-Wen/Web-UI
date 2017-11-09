@@ -1,0 +1,535 @@
+body{
+  font-family:'Microsoft YaHei',Arial,sans-serif;font-size:12px;overflow-x:hidden
+}
+
+body.layout{
+  position:relative;min-width:1020px
+}
+*{
+  -moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box
+}
+/*iframe{
+  border:none
+}*/
+/*[ng-click]{
+  cursor:pointer
+}*/
+ol,ul{
+  display:inline-block;margin:0 auto;padding:0;list-style:none
+}
+
+.wrapper{
+  position:relative;width:1000px;margin:0 auto;
+  /*padding-left: 45px;*/
+}
+
+.play-btn{
+  display:none
+}
+.account-area{
+  position:absolute;top:117px;left:0;z-index:6;width:100%;min-width:1000px
+}
+#account-box{
+  position:relative;top:100%;z-index:1;display:inline-block;width:100%;height:54px;padding:10px 0;background-color:#3c2528;border-top:1px solid #3c2528
+}
+#account-box.loginbar{
+  text-align:right
+}
+#account-box .wrapper:before{
+  content:'';display:inline-block;width:124px;height:34px;vertical-align:top;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/wz.png') no-repeat left center
+}
+#account-box.loginbar .wrapper:before{
+  width:106px;float:left;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/title02.png') no-repeat left center
+}
+#account-box .wrapper:after{
+  content:'';float:right;display:inline-block;width:157px;height:16px;margin:10px 0;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/web.png') no-repeat center
+}
+#account-box.loginbar .wrapper:after{
+  content:none
+}
+#account-box form{
+  position:relative;display:inline-block;height:32px
+}
+#account-box form>div{
+  display:inline-block;position:relative
+}
+#account-box form input{
+  width:125px;height:32px;margin:0 5px;padding-left:25px;color:#fff;font-size:14px;line-height:32px;background-color:#2b1719;background-repeat:no-repeat;background-position:5px center;border:1px solid #4a3035;outline:none
+}
+#account-box form input:focus{
+  border:1px solid #ffd053
+}
+#account-box form input#login_account{
+  background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/icon08.png')
+}
+#account-box form input#login_password{
+  background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/icon09.png')
+}
+#account-box form #check-code-wrapper input{
+  background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/icon10.png')
+}
+#account-box form input::-webkit-input-placeholder{
+  color:inherit
+}
+#account-box form input:-ms-input-placeholder{
+  color:inherit
+}
+#account-box form input::-moz-placeholder{
+  color:inherit
+}
+#account-box form input.placeholder{
+  color:inherit
+}
+#account-box form button{
+  font-size:14px;border:none
+}
+*.login-btn{
+  width:109px;height:34px;color:#fff;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/btn03.png');filter:alpha(opacity=80);opacity:.8
+}
+*.login-btn:hover{
+  filter:alpha(opacity=100);opacity:1
+}
+*.forget-btn{
+  position:absolute;top:0;right:0;color:#f5ad90;background:none;line-height:32px
+}
+#check-code-wrapper{
+  position:relative;display:inline-block
+}
+#captcha{
+  position:absolute;top:5px;right:9px;width:auto;height:23px
+}
+#account-box form>div#agree{
+  display:inline-block;position:absolute;top:34px;right:6px;z-index:2;padding:2px 5px;font-size:12px;color:#fff;background-color:#83523e
+}
+#account-box form>div#agree a{
+  font-weight:bold;cursor:pointer
+}
+#account-box form+.join-btn{
+  display:inline-block;width:109px;height:34px;line-height:34px;text-align:center;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/btn04.png');filter:alpha(opacity=80);opacity:.8
+}
+#account-box form+.join-btn:hover{
+  filter:alpha(opacity=100);opacity:1
+}
+ul#account-info{
+  position:relative;margin-right:10px
+}
+ul#account-info>li{
+  float:left;width:160px;height:32px;color:#fbe9ac;font-size:12px;line-height:32px
+}
+ul#account-info>li>span.account{
+  display:inline-block;max-width:6em;color:#fdf050;-ms-text-overflow:ellipsis;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;overflow:hidden
+}
+ul#account-info>li a{
+  cursor:pointer
+}
+ul#account-info>li a:hover{
+  color:#ffd800
+}
+ul#account-nav>li{
+  display:inline-block;float:left;line-height:32px
+}
+ul#account-nav>li+li:before{
+  content:'|';color:#fbe9ac;padding:0 5px
+}
+ul#account-nav>li.for-home{
+  display:none
+}
+ul#account-nav>li>a{
+  display:inline-block;color:#fbe9ac;font-size:12px;text-decoration:none;text-align:center;cursor:pointer
+}
+ul#account-nav>li>a.highlight-red{
+  color:red
+}
+ul#account-nav>li>a.http-deposit{
+  color:#fff
+}
+ul#account-nav>li:hover>a{
+  color:#fff
+}
+ul#account-nav>li>a.sign-out{
+  display:inline-block;width:60px;height:24px;color:#fff;text-align:center;line-height:24px;background-color:#da3918
+}
+#content{
+  position:relative;margin-top:137px;background:#2f1c20 url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/bg.jpg') no-repeat center top
+}
+#news{
+  position:relative;width:100%;height:40px
+}
+#news .wrapper:before{
+  content:attr(title);background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/new_img.png') no-repeat left center;padding-left:20px;color:#ffd053;font-size:14px;text-align:left;line-height:40px
+}
+#hot-news{
+  float:right;width:900px;white-space:nowrap;overflow:hidden
+}
+#hot-news a{
+  color:#fff;font-size:14px;text-decoration:none;line-height:40px
+}
+#hot-news a:hover{
+  text-decoration:underline
+}
+#footer{
+  background:#221316 url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/footer_bg.jpg') no-repeat center top
+}
+#footer-info>li{
+  position:relative;float:left;width:250px;height:45px;padding-left:50px;color:#f5ad90;font-size:14px;text-align:center;line-height:45px;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/contact_bg.png');background-repeat:no-repeat;background-position:left center
+}
+#footer-info>li+li:before{
+  content:'';display:inline-block;position:absolute;top:18px;right:100%;width:1px;height:10px;background:#f5ad90
+}
+#footer-info>li:hover{
+  color:#ffd053
+}
+#footer-info>li.tel{
+  background-position-x:40px
+}
+#footer-info>li.mail{
+  background-position-x:-210px
+}
+#footer-info>li.qq{
+background-position-x:-438px
+}
+#footer-info>li.chat{
+  background-position-x:-680px
+}
+#footer-logo{
+  display:inline-block;width:100%;height:80px;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/footer_logo.png') no-repeat center bottom
+}
+#footer-nav{
+  display:block;text-align:center;margin:10px auto
+}
+#footer-nav li{
+  display:inline-block
+}
+#footer-nav li+li:before{
+  content:'|';padding:0 15px;color:#f5ad90
+}
+#footer-nav a{
+  color:#f5ad90;font-size:12px;text-align:center;text-decoration:none
+}
+#footer-nav a:hover{
+  color:#ffd053;transition:all .4s
+}
+#footer-suggest{
+  display:block;margin:0 auto;color:#83523e;font-size:12px;line-height:25px;text-align:center
+}
+.footer-slogan{
+  height:60px;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/footer_slogan.jpg') no-repeat center
+}
+.footer-service{
+  height:70px;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/footer_service.jpg') no-repeat center
+}
+aside.services{
+  position:absolute;z-index:2;top:210px;width:214px
+}
+aside.service-left{
+  left:-170px;-webkit-transition:left .6s;-o-transition:left .6s;-moz-transition:left .6s;transition:left .6s;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/service/left.png')
+}
+aside.service-left:hover{
+  left:0
+}
+aside.service-right{
+  right:0;width:44px;height:375px;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/r_float.png');text-align:right;-webkit-transition:width .6s;-o-transition:width .6s;-moz-transition:width .6s;transition:width .6s
+}
+aside.service-right ul{
+  display:none
+}
+aside.service-right ul li{
+  margin-left:44px
+}
+aside.service-right:hover{
+  width:214px
+}
+aside.service-right:hover ul{
+  display:block
+}
+ul.girl>li{
+  width:170px;color:#ff0;font-family:'Microsoft YaHei';font-size:22px;text-align:center
+}
+ul.girl>li>a{
+  display:inline-block;color:inherit;width:100%;height:100%;text-decoration:none
+}
+ul.girl>li.discunt{
+  height:70px;margin-bottom:277px
+}
+ul.girl>li.chat{
+  height:67px
+}
+ul.girl>li.qq{
+  padding-top:31px;height:55px
+}
+ul.girl>li.qq2{
+  height:28px
+}
+ul.girl>li.qq3{
+  padding-top:30px;height:60px;font-size:24px
+}
+ul.girl>li.tel{
+  padding-top:41px;height:69px;font-size:18px
+}
+ul.girl>li.mobile{
+  height:65px
+}
+ul.girl>li.mobile a{
+  padding-top:35px
+}
+ul.girl>li.closed{
+  height:31px;cursor:pointer
+}
+aside#service-lb{
+  position:fixed;left:0;bottom:0;z-index:8
+}
+aside#service-lb>div{
+  position:relative;display:inline-block;width:248px;height:204px;background-repeat:no-repeat;background-position:left bottom
+}
+aside#service-lb>div a{
+  display:inline-block;width:100%;height:100%
+}
+aside#service-lb .close{
+  position:absolute;display:inline-block;cursor:pointer
+}
+aside#service-lb>div.redenvelope{
+  padding-right:68px;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/lb_redenvelope.png')
+}
+aside#service-lb>div.redenvelope .close{
+  top:0;right:68px;width:35px;height:20px
+}
+aside#service-lb>div.deposit{
+  padding-top:69px;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/lb_deposit.gif')
+}
+aside#service-lb>div.deposit .close{
+  top:75px;right:5px;width:20px;height:20px
+}
+aside#service-lb>div.app{
+  padding-top:29px;padding-right:63px;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/service/lb_app.gif')
+}
+aside#service-lb>div.app .close{
+  top:6px;right:62px;width:20px;height:20px;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/service/app_close.png')
+}
+#mailbox{
+  position:relative;display:inline-block;width:24px;height:24px;vertical-align:top;text-decoration:none;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Shared/images/m_icon.png') no-repeat
+}
+#mailbox>span,#mailbox>span:hover{
+  position:absolute;left:80%;bottom:60%;min-width:16px;padding:0 2px;height:16px;color:#000;font-size:12px;text-align:center;line-height:16px;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:#fff47e
+}
+#marquee-wrapper{
+  position:fixed;top:0;right:0;bottom:0;left:0;z-index:-1;display:none
+}
+#marquee-wrapper.show{
+  display:block;z-index:1000;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Shared/images/transparent-black.png')
+}
+#marquee{
+  width:600px;max-height:500px;margin:30px auto 0 auto;background-color:#fff;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Shared/images/table_background.jpg');-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;cursor:default;-moz-transition:margin-top ease-in 300ms;-o-transition:margin-top ease-in 300ms;-webkit-transition:margin-top ease-in 300ms;transition:margin-top ease-in 300ms
+}
+#marquee>header{
+  text-align:center;background-color:#e9e9e9;border-bottom:1px solid #ccc;-moz-border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;border-radius:5px 5px 0 0
+}
+#marquee>header>h2{
+  margin:0;color:#0080e3;font-size:21px;line-height:60px
+}
+ul#newsBags{
+  margin:0;padding:10px 50px;max-height:380px;overflow:auto
+}
+ul#newsBags>li{
+  color:#454545;font-size:13px;line-height:27px;list-style:disc;white-space:pre-line;border-bottom:1px dashed #999
+}
+#marquee>footer{
+  text-align:center;line-height:80px;background-color:#e9e9e9;background-image:-webkit-radial-gradient(center top,ellipse farthest-side,rgba(0,0,0,.3),transparent);background-size:100% 8px;background-repeat:no-repeat;border-top:1px solid #ccc;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;border-radius:0 0 5px 5px
+}
+#marquee>footer>span{
+  display:inline-block;width:119px;font-size:15px;font-weight:bolder;line-height:45.5px;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Shared/images/sent_bn.png');cursor:pointer
+}
+#marquee>footer>span:hover{
+  background-position:0 -45.5px
+}
+.ui-widget-header{
+  min-height:30px;line-height:30px
+}
+#ad-dialog{
+  display:none;padding:0
+}
+#ad-dialog img{
+  width:100%;height:auto!important
+}
+#ad-dialog .dialog-footer{
+  height:30px;padding:0 3px;font-size:12px;font-weight:bold;line-height:25px;border-top:1px solid #000
+}
+.ui-dialog{
+  z-index:999
+}
+.ui-dialog .ui-dialog-title{
+  font-size:13px;line-height:15px
+}
+.ui-dialog .ui-dialog-buttonpane{
+  margin:0;padding:0;border:none
+}
+button.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{
+  font-size:12px
+}
+.ui-dialog .ui-dialog-buttonpane button{
+  position:absolute;bottom:0;right:0;margin:3px 6px;background:#ffd800
+}
+@media screen and (max-width:1000px){
+  #home .img-right{
+    display:none
+  }
+}
+#logingame-body{
+  background-color:#2f1c20
+}
+#lobby{
+  display:inline-block;width:100%;margin:30px auto
+}
+#lobby>ul.game-list{
+  text-align:center
+}
+#lobby>ul.game-list>li{
+  position:relative;display:inline-block;float:left
+}
+#lobby>ul.game-list>li:hover{
+}
+#un-lobby{
+  display:inline-block;width:100%;margin:20px auto;padding:20px;background-color:#231316;border:1px solid #4b2f32
+}
+#un-lobby aside{
+  float:left;width:250px;padding:0 15px
+}
+#un-lobby aside:after{
+  content:'澳门永利集团唯一授权在线牌照';display:inline-block;margin-top:20px;width:218px;padding-top:175px;color:#f8d169;font-size:12px;text-align:center;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/asideimg.png') no-repeat center top
+}
+#un-lobby ul#sidebar li{
+  width:100%;height:67px;font-size:16px;border-bottom:1px solid #391e22
+}
+#un-lobby ul#sidebar li a{
+  display:inline-block;width:100%;height:100%;padding:20px 0 5px 60px;color:#fff;font-size:16px;text-align:left;text-decoration:none;background-image:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/aside_n.png');background-repeat:no-repeat;background-position:left 0
+}
+#un-lobby ul#sidebar li a span{
+  display:block;font-size:12px
+}
+#un-lobby ul#sidebar li:hover a{
+  color:#ffd053
+}
+#un-lobby ul#sidebar li.mw-fish a{
+  background-position-y:20px
+}
+#un-lobby ul#sidebar li.mw-game a{
+  background-position-y:-45px
+}
+#un-lobby ul#sidebar li.ug-fish a{
+  background-position-y:-110px
+}
+#un-lobby ul#sidebar li.mw a{
+  background-position-y:-175px
+}
+#un-lobby ul#sidebar li.mg a{
+  background-position-y:-230px
+}
+#un-lobby ul#sidebar li.pt a{
+  background-position-y:-310px
+}
+#un-lobby ul#sidebar li.ag a{
+  background-position-y:-375px
+}
+#un-lobby ul#sidebar li.sg a{
+  background-position-y:-440px
+}
+#un-lobby ul#sidebar li.prg a{
+  background-position-y:-510px
+}
+#un-lobby ul#sidebar li.gns a{
+  background-position-y:-568px
+}
+#un-lobby ul#sidebar li.gpi a{
+  background-position-y:-633px
+}
+#un-lobby ul#sidebar li.bb a{
+  background-position-y:-700px
+}
+#un-lobby ul#sidebar li.live a{
+  background-position-y:-771px
+}
+#un-lobby ul#sidebar li.lottery a{
+  background-position-y:-837px
+}
+#un-lobby ul#sidebar li.sport a{
+  background-position-y:-901px
+}
+#articles{
+  float:right;width:700px;min-height:1080px;padding:30px 20px 0 30px;color:#7c6264;font-size:12px;background-color:#1a0e10
+}
+#articles h2{
+
+}
+#articles h3{
+  font-size:16px;color:#fbc85b;text-align:left
+}
+#articles h4{
+  font-size:16px;color:#fbc85b;text-align:left
+}
+#articles>ul{
+  list-style:none
+}
+#articles ol{
+  padding-left:20px;list-style-type:decimal
+}
+#articles p,#articles li{
+  font-size:12px;text-align:justify;line-height:2em
+}
+#articles p{
+  margin:1em 0
+}
+#articles table{
+  width:100%
+}
+#articles table tr,#articles table th,#articles table td{
+  line-height:2em;text-align:center;color:#fff;border:1px solid #999
+}
+#articles table th{
+  font-weight:bold;line-height:3em;background-color:#810000
+}
+#articles .highlight{
+  color:red;text-decoration:none
+}
+#articles ul.mtab-menual{
+  padding-bottom:15px;padding-left:0;text-align:left
+}
+#articles ul.mtab-menual li{
+  display:inline-block;width:115px;font-size:14px;color:#000;text-align:center;background-color:#e3c95b;border-radius:25px
+}
+#articles ul.mtab-menual li.mtab{
+  background-position-x:right
+}
+#articles.deposit{
+  padding:15px 32px 60px
+}
+#articles.deposit table th{
+  color:#f6d459;font-size:18px;padding:6px 0
+}
+#articles.deposit ul{
+  list-style-type:none;padding:0;color:silver
+}
+#articles.deposit ul>li{
+  font-size:16px;font-family:'Microsoft Jhenghei';counter-increment:title
+}
+#articles.deposit ul>li a{
+  text-decoration:none;cursor:pointer
+}
+#articles.deposit ul>li>a:before{
+  content:counter(title,upper-alpha)"："
+}
+#articles.deposit ul.no-counter>li>a:before{
+  content:''
+}
+#articles.deposit ul>li>a{
+  color:#f6d459;text-decoration:underline
+}
+#articles.deposit ul li .red{
+  color:red
+}
+#articles.deposit ul li .yellow{
+  color:#ff0
+}
+#articles.deposit ul li .green{
+  color:#0f0
+}
+#articles.deposit ul li .blink{
+  color:red;-moz-animation-duration:.8s;-o-animation-duration:.8s;-webkit-animation-duration:.8s;animation-duration:.8s;-moz-animation-name:blink;-o-animation-name:blink;-webkit-animation-name:blink;animation-name:blink;-moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-moz-animation-direction:alternate;-o-animation-direction:alternate;-webkit-animation-direction:alternate;animation-direction:alternate;-moz-animation-timing-function:linear;-o-animation-timing-function:linear;-webkit-animation-timing-function:linear;animation-timing-function:linear}@-moz-keyframes blink{0%{color:#24e12b}50%{color:#ff0}100%{color:#00f}}@-webkit-keyframes blink{0%{color:#24e12b}50%{color:#ff0}100%{color:#00f}}@keyframes blink{0%{color:#24e12b}50%{color:#ff0}100%{color:#00f}}#articles.deposit ul li .wechat{height:60px;margin:5px 0 20px;background:url('http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Shared/images/wechat.gif') no-repeat left top}#articles.deposit p{font-size:14px}#articles .deposit-warn{color:#f6d459}#articles .info{color:silver}#articles .info a{color:#f6d459;font-family:'Microsoft Jhenghei';letter-spacing:1.5px;text-decoration:none}#articles .info .purple{color:#f0f}.recover{color:red}.recover.color{color:#ff0}.body{position:relative;width:1000px;margin:0 auto;padding:1px;font-size:14px;font-family:PMingLiU;background:#2f1c20;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.body #title{color:#fff;text-align:center;background:#2f1c20}.body.container #title,.body #account-heading,.body #withdrawal-heading{color:#fff;background:#2f1c20}.body #show-account-info.btn{color:#fff}.form-group .control-div input::-webkit-input-placeholder{color:#999}.form-group .control-div input::-moz-placeholder{color:#999}.form-group .control-div input:-ms-input-placeholder{color:#999}.form-group .control-div input.placeholder{color:#999}.panel{width:100%;color:#5f5f5f;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Account/images/panel_background.jpg') repeat;border:0}#title{height:48px;font-weight:bold;font-size:21px;font-family:'Microsoft JhengHei';text-transform:uppercase;border:none}#title>div{margin-top:-1px;text-align:center;text-transform:uppercase}#account-panel,#withdrawal-panel{width:792px;color:#5f5f5f;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/WithdrawApplication/images/panel_background.jpg') repeat;border:1px solid #b7b7b7;-moz-box-shadow:inset 0 0 1px 1px #fff;-webkit-box-shadow:inset 0 0 1px 1px #fff;box-shadow:inset 0 0 1px 1px #fff}#account-heading,#withdrawal-heading{margin:1px 1px;font-family:PMingLiU;font-size:15px;font-weight:bold;text-align:left;text-transform:uppercase}.panel-body{text-align:center}.panel-body>form{width:700px;margin:0 auto}.control-div input{width:100%;padding:3px 5px;line-height:25px;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Account/images/input_center.png') repeat-y;border:0}.control-div input:focus{outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255,249,149,.6);-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255,249,149,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(255,249,149,.6)}.tooltip{position:absolute;left:93%;top:-2px;z-index:1;display:inline-block}.tooltipshowarrow_int{position:absolute;top:5px;right:-1px;z-index:1000;display:block;border:8px solid;border-color:transparent #fff;border-left-width:0;-moz-box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);-webkit-box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07)}.tooltipshowarrow_out{position:absolute;top:5px;right:0;z-index:999;display:block;border:8px solid;border-left-width:0;border-color:transparent #bbb;-moz-box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);-webkit-box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);box-shadow:inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07)}.tooltipshow{position:absolute;z-index:999!important;width:250px;padding:5px;background-color:#fff;border:1px solid;border-color:#bbb #bbb #a8a8a8;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;-moz-box-shadow:0 1px 3px rgba(0,0,0,.2);-webkit-box-shadow:0 1px 3px rgba(0,0,0,.2);box-shadow:0 1px 3px rgba(0,0,0,.2)}.form-control::-webkit-input-placeholder{color:#878787}.form-control:-moz-placeholder{color:#878787}.form-control::-moz-placeholder{color:#878787}.form-control:-ms-input-placeholder{color:#878787}.input-block{position:relative;display:inline-block;width:304px}.help-block{color:#8a6d3b}.input-block-top{position:absolute;top:-2px;left:0;display:inline-block;width:100%;height:4px;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Account/images/input-top-btm.png') no-repeat 0 0}.input-block-btm{position:absolute;bottom:-8px;left:0;display:inline-block;height:10px;width:100%;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Account/images/input-top-btm.png') no-repeat 0 -4px}.btn-submit{position:relative;width:119px;height:45px;color:#454545;font-size:15px;font-family:PMingLiU;font-weight:bold;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Shared/images/sent_bn.png') no-repeat 0 0;border:0}.btn-submit:hover{color:#454545;background:url('http://cdn.aliucdn.com:8888/Web.Portal/_Common/Content/Views/Shared/images/sent_bn.png') no-repeat 0 -46px}.btn-submit[disabled]:hover{color:#999;background-position-y:0}.table{color:#000}.table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td{line-height:2em}table tfoot{text-align:center;background:#eee}

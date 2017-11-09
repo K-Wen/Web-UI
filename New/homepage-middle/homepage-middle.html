@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html  id="ng-app" ng-app="portalApp" meidon-time="2017/11/06 23:21:08"  moment-lang="en-US"  ng-init="'澳门永利集团'">
+<head>
+    <title>澳门永利集团</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="./homepage-middle.css?version=201404141731" rel="stylesheet" />
+</head>
+<body class="layout" ng-controller="LayoutCtrl">
+
+<!-- <div class="account-area home" >
+  <div id="account-box">
+    <div class="wrapper">
+      <form ng-controller="LoginCtrl" ng-submit="login(loginParams)" ng-disabled="isProcessing">
+        <input id="login_account" type="text" placeholder="Account" ng-model="loginParams.account" required autofocus tabindex="1" />
+        <div>
+          <input id="login_password" type="password" placeholder="Password" ng-model="loginParams.password" required tabindex="2" />
+          <button class="forget-btn" ng-click="lineChatClick()" type="button">GET P/W</button>
+        </div>
+
+        <div id="check-code-wrapper">
+          <input data-checkcode-retriever="checkCode" type="text" placeholder="Check Code" ng-model="loginParams.checkCode" checkcode-type="Login" required tabindex="3" />
+          <img id="captcha" ng-show="checkCode.image" ng-src="{{checkCode.image}}" />
+        </div>
+        <button id="login-box" class="login-btn" ng-disabled="isProcessing" ng-bind="isProcessing ? 'LOGIN...' : 'LOGIN'">LOGIN</button>
+        <div id="agree" ng-show="loginOver" ng-cloak>
+        Click Sign agreed to<a ng-click="agreement()">Agreement</a>
+        </div>
+      </form>
+    <div class="join-btn" ng-click="RegisterClick()">JOIN US</div>
+    <div class="play-btn" ng-click="FreePlayClick()">Free Play</div>
+    </div>
+  </div>
+</div> -->
+
+<div id="content">
+
+  <div id="banner">
+    <div id="news">
+      <div class="wrapper" title="News">
+        <div id="hot-news" class="marqueen">
+          <a href="javascript: void(0)" ng-click="newsClick()">
+          温馨提示：近期有不法分子利用恶意手段拦截我公司域名网址，跳转到非法网站，利用我公司名义骗取会员存款，现我公 司郑重声明：1我公司并未倒闭或改名；2.并未被收购或者转让，此类消息，纯属虚假诈骗，不符合我公司诚信服务的经 营理念，请广大会员谨防上当受骗。如有发现请及时联系24小时客服核实确认，避免损失！微信客服：dzyy4437 QQ客服 ：40065733
+
+          ★重要公告★由于近期存在较多假冒【澳门永利集团】网站及恶意营销诋毁！给广大会员造成困扰， 无法进入网页，出现非澳门永利集团官方网站只需公司网址www.54543366.com后面加“：8888”即可轻松解决 如：www.54543366.com:8888建议下载谷歌火狐浏览器 敬请认准【澳门永利】官网【www.4437.com】
+
+          温馨提示：尊敬的贵宾会员，您好！由于360浏览器恶意提醒安全问题及恶意拦截，为了您更快、更流畅的进行游戏，建议您不要使用360浏览器，并立即卸载360浏览器，请您下载以下浏览器来打开本站。【谷歌浏览器】、【百度浏览器】【火狐浏览器 】【寰宇浏览器 】【搜狗浏览器】 如果检测后还不能登录请按以下操作步骤：打开IE浏览器：选择：工具-》Internet选项-》 在选择 (删除历史浏览记录)-》删除-》重启IE，感谢您的支持，祝您游戏愉快！
+
+          ★【友情提示】尊敬的贵宾会员： 注册成功后【真实姓名】不可以进行更改，请广大会员注册成功后仔细核对个人信息，如发现【真实姓名】错误请重新注册账户，如发生因【真实姓名】不符造成无法出款的现象，公司概不负责，谢谢合作 ！</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div id="home" ng-controller="LobbiesCtrl">
+      <!-- <img class="img-left" src="http://cdn.aliucdn.com:8888/Web.Portal/CJ002-01.Portal/Content/Views/Home/images/img02.png" alt="" /> -->
+      <footer id="footer">
+        <div class="wrapper">
+          <ul id="footer-info">
+            <li class="tel" ng-bind="ContactInfo.TEL"></li>
+            <li class="mail" ng-bind="ContactInfo.Email"></li>
+            <li class="qq" ng-bind="ContactInfo.QQ" ng-click="qqClick(ContactInfo.QQ)"></li>
+            <li class="chat" ng-click="lineChatClick()">24小时在线客服</li>
+          </ul>
+
+          <div id="footer-logo"></div>
+
+          <ul id="footer-nav">
+            <li><a href="/AboutUS">ABOUT US</a></li>
+            <li><a href="/Contact">CONTACT US</a></li>
+            <li><a href="/Partner">AFFILIATION</a></li>
+            <li><a href="/How/Deposit">HOW TO DEPOSIT</a></li>
+            <li><a href="/How/Withdrawal">HOW WITHDRAWALS</a></li>
+            <li><a href="/FAQ">FAQ</a></li>
+            <li><a href="/ResponsibleGambling">Responsible Gambling</a></li>
+            <li><a href="/Guide">CHARITABLE</a></li>
+            <li class="download"><a ng-href="{{ContactInfo.HttpInformation ==''?'#': ContactInfo.HttpInformation}}" target="_blank">DOWNLOAD</a></li>
+            <li><a ng-href="{{ContactInfo.HttpDetection ==''?'#': ContactInfo.HttpDetection}}" target="_blank">Network Detect</a></li>
+            <li><a href="http://gpk-client.com/" target="_blank">CLIENT</a></li>
+          </ul>
+
+          <div id="footer-suggest">Copyright &#169; 澳门永利集团 Reserved</div>
+
+          <div class="footer-slogan"></div>
+          <div class="footer-service"></div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+    <!-- <aside class="services service-left" scrollfollow>
+        <ul class="girl">
+            <li class="discunt" title="PROMOTIONS"><a href="/Promotion"></a></li>
+            <li class="closed" service-closed></li>
+        </ul>
+    </aside>
+    <aside class="services service-right" scrollfollow>
+        <ul class="girl">
+            <li class="chat" ng-click="lineChatClick()" title="Online Chat"></li>
+            <li class="qq" ng-click="qqClick(ContactInfo.QQ)" title="{{ContactInfo.QQ}}" ng-bind="ContactInfo.QQ"></li>
+            <li class="qq2" ng-click="qqClick(ContactInfo.QQ2)" title="{{ContactInfo.QQ2}}" ng-bind="ContactInfo.QQ2"></li>
+            <li class="qq3" ng-click="qqClick(ContactInfo.QQ3)" title="{{ContactInfo.QQ3}}" ng-bind="ContactInfo.QQ3"></li>
+            <li class="tel" title="{{ContactInfo.TEL2}}" ng-bind="ContactInfo.TEL2"></li>
+            <li class="mobile" title="MOBILE BET"><a href="/Mobile"></a></li>
+            <li class="closed" service-closed></li>
+        </ul>
+    </aside>
+
+
+    <aside id="service-lb" class="cycle-slideshow" ng-cloak
+           data-cycle-slides="> div"
+           data-cycle-timeout="5000">
+        <div class="redenvelope">
+            <a ng-href="{{ContactInfo.HttpRedenvelope == ''?'#': ContactInfo.HttpRedenvelope}}" target="_blank"></a>
+            <div class="close" service-closed></div>
+        </div>
+        <div class="deposit">
+            <a ng-href="{{ContactInfo.HttpDeposit == ''?'#': ContactInfo.HttpDeposit}}" target="_blank"></a>
+            <div class="close" service-closed></div>
+        </div>
+        <div class="app">
+            <a ng-href="{{ContactInfo.HttpAPP == ''?'#': ContactInfo.HttpAPP}}" target="_blank"></a>
+            <div class="close" service-closed></div>
+        </div>
+    </aside>
+
+    <div style="display:none"></div> -->
+
+</body>
+</html>
