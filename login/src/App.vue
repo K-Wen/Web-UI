@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <div class="main-content redBorder">
       <el-container class="redBorder">
         <el-header height="120px" class="redBorder" style="padding:0;">
-          <headerView></headerView>
+          <headerView :permission="1"></headerView>
         </el-header>
 
         <el-main class="redBorder">
@@ -65,10 +65,13 @@ export default {
 </script>
 
 <style>
+.container {
+  background:#2f1c20;
+}
 .main-content {
   position: relative;
   width: 1200px;
-  background:#2f1c20;
+  /*background:#2f1c20;*/
   margin: 0 auto;
 }
 .redBorder {
